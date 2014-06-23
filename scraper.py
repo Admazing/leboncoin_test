@@ -4,13 +4,14 @@ import urllib
 
 
 def parse(url):
-    reader = urllib.urlopen(url).read()
-    tree = lxml.html.fromstring( reader )
+    print url
+    #reader = urllib.urlopen(url).read()
+    #tree = lxml.html.fromstring( reader )
     
-    title = tree.find_class('header_adview')[0].cssselect('h2')[0].text_content()
+    #title = tree.find_class('header_adview')[0].cssselect('h2')[0].text_content()
 
-    data = { 'annonce_url': url, 'title': title }
-    scraperwiki.sqlite.save(unique_keys=['annonce_url'],data=data)
+    #data = { 'annonce_url': url, 'title': title }
+    #scraperwiki.sqlite.save(unique_keys=['annonce_url'],data=data)
 
     
 
