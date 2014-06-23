@@ -19,7 +19,7 @@ url = "http://www.mistersmoke.com/mods-c-311.html"
 reader = urllib.urlopen(url).read()
 tree = lxml.html.fromstring( reader )
 
-list_annonces = tree.find_class('desc')[0]
+list_annonces = tree.find_class('desc')
 annonces = list_annonces.cssselect('a')
 
 for a in annonces:
