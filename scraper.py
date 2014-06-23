@@ -15,11 +15,11 @@ def parse(url):
 
     
 
-url = "http://www.mistersmoke.com/mods-c-311.html"
+url = "www.leboncoin.fr/telephonie/offres/nord_pas_de_calais/?f=a&th=1"
 reader = urllib.urlopen(url).read()
 tree = lxml.html.fromstring( reader )
 
-list_annonces = tree.find_class('desc')
+list_annonces = tree.find_class('list-lbc')[0]
 annonces = list_annonces.cssselect('a')
 
 for a in annonces:
