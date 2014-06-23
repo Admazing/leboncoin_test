@@ -15,7 +15,7 @@ def parse(url):
 
     
 
-url = "http://www.leboncoin.fr/telephonie/offres/nord_pas_de_calais/?f=a&th=1"
+url = "http://www.leboncoin.fr/telephonie/offres/nord_pas_de_calais/?f=a&th=1&q=iphone"
 reader = urllib.urlopen(url).read()
 tree = lxml.html.fromstring( reader )
 
